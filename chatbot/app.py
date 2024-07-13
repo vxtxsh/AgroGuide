@@ -6,7 +6,7 @@ import google.generativeai as genai
 app = Flask(__name__)
 
 # Replace with your actual API key from Google Cloud Console
-os.environ["GEMINI_API_KEY"] = "AIzaSyAVKSesFx5S5oXC6UJWJE76N5RDueHem98"
+os.environ["GEMINI_API_KEY"] = "Replace with API key"
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
 # Initialize GenerativeModel
