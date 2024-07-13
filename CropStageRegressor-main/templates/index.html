@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Web App</title>
+    <style>
+        body {
+            background-image: url('static/henry-perks-aOTBPSDjgj0-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: black;
+        }
+        
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 15px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Web App</h1>
+    <form action="/predict" method="post">
+        <label for="height">Height (cm):</label>
+        <input type="text" id="height" name="height" required><br>
+        <label for="leaf_count">Leaf Count:</label>
+        <input type="text" id="leaf_count" name="leaf_count" required><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

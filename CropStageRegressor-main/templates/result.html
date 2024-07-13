@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-image: url('static/henry-perks-aOTBPSDjgj0-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: black;
+        }
+
+        table {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+
+        table th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Prediction Result</h2>
+    <table border="1">
+        <tr>
+            <th>Growth Stage</th>
+            <th>Temperature (°C)</th>
+            <th>Humidity (%)</th>
+        </tr>
+        <tr>
+            <td>{{ result['Growth Stage'] }}</td>
+            <td>{{ result['Temperature'] }}</td>
+            <td>{{ result['Humidity'] }}</td>
+        </tr>
+    </table>
+</body>
+</html>

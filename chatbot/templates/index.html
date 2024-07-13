@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('static/henry-perks-aOTBPSDjgj0-unsplash.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+            margin: 0;
+            padding: 0;
+        }
+        .chat-container {
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            white-space: pre-wrap;  /* Preserve whitespace and line breaks */
+        }
+        .user {
+            background-color: #d1e7dd;
+            text-align: right;
+        }
+        .chatbot {
+            background-color: #f8d7da;
+            text-align: left;
+        }
+        form {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<center>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br><br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <div class="chat-container">
+        <center>
+        <h2>AgroBot</h2>
+        </center>
+        <div id="chatbox">
+            {% if conversation_history %}
+                <div class="message user">
+                    <p>{{ conversation_history.user }}</p>
+                </div>
+                <div class="message chatbot">
+                    <p>{{ conversation_history.chatbot }}</p>
+                </div>
+            {% endif %}
+        </div>
+        <form action="/chat" method="post">
+            <input type="text" name="user_input" placeholder="Type your message here..." required>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</body>
+</center>
+</html>
